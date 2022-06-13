@@ -1,0 +1,20 @@
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 10px;
+}
+th{
+    
+    color:white;
+}
+thead{
+    background-color: black;
+}
+#colorrojo{
+    color:red;
+}
+#fotoaling{
+    text-align: left;
+}
