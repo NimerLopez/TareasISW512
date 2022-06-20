@@ -1,0 +1,110 @@
+
+html{
+   margin: 100px 100px;
+}
+#phone1{   
+margin: auto;
+ display: block;  
+}
+#seccion1{
+    background-color: brown;
+}
+.cuadro_letras  {
+    
+    width: 400px;
+    height: 500;
+    position: absolute;
+    left: 80px;
+    font: small-caps 150%/200% serif;
+}
+.cuadro_img{
+    position: absolute;  
+    left: 530px;
+}
+.cuadro_img2{
+    position: absolute;  
+    left: 500px;
+    
+   
+}
+.cuadro_letras{
+    position: absolute;
+}
+#boton1{
+    background-color: aqua;
+    font-size: large;
+    border-radius: 100px;
+}
+#fondo{  
+    position: absolute;
+    top: 500px;
+}
+#cuadro_seccio2{ 
+    position: absolute;
+    bottom: 4.0cm;
+    left: 70px;
+    color: aliceblue;
+    text-align: center;
+    
+}
+
+#cuadro_seccio22{ 
+    position: absolute;
+    bottom: 4.0cm;
+    left: 300px;
+    color: aliceblue;
+    text-align: center;
+    
+}
+#cuadro_seccio23{ 
+    position: absolute;
+    bottom: 4.0cm;
+    left: 600px;
+    color: aliceblue;
+    text-align: center;
+    
+}
+#cuadro_seccio2 h2{ 
+    color: aqua;  
+ }
+#cuadro_seccio22 h2{ 
+    color: aqua;  
+ }
+ #cuadro_seccio23 h2{ 
+    color: aqua;  
+ }
+ .cuadro_letrasS3{
+    width: 500px;
+    height: 500;
+    position: relative;
+    left: 150px;
+    top: 980px;
+    font: small-caps 120%/200% serif;
+    text-align: center;
+ }
+ .cuadro_letrasS3 button {   
+    background-color: aqua;
+    font-size: large;
+    border-radius: 100px;
+ }
+ #fondo4{
+    position: relative;
+    top: 1150px;
+ }
+ #Letrass4{
+    position: absolute;
+    top: 1550px;
+    text-align: center;
+    left: 7cm;
+ }
+ #pla1{
+    position: absolute;
+    top: 1700px;
+    left: 4cm;
+ }
+ #pla2{
+    position: absolute;
+    top: 1700px;
+    left: 14cm;
+ }
+
