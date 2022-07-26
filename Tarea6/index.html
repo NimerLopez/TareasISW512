@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="foto">
+                <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" height="50" alt="">
+            </div>
+            <div id="menu">
+                
+                <ul>
+                    <!--Menu Inicio-->
+                    <li><a href="#">Inicio </a>
+                        <ul id="submenu">                           
+                            <li id="l1c"><a href="#">Admin</a></li>
+                            <li id="l2c"><a href="#">Menu </a></li>
+                        </ul>                                  
+                    </li>
+                   
+                    <!--Menu Cambalache-->
+                    <li id="ml1"><a href="#">|Admin |</a></li>
+                    <!--Menu Ingresar-->
+                    <li id="ml2"><a href="#">Menu </a></li>
+                </ul>
+            </div>
+            <div id="boton">
+
+                <button>🛒MiCarrito</button>
+            </div>
+
+        </div>
+        <!--Fin container-->
+
+    </header>
+    <main>
+
+        <section class="s1">
+            <div class="grid">
+                <div id="capdatos">
+
+                    <h1>Login</h1>
+                    <p>Nombre</p>
+                    <input id="nom" type="Nombre">
+                    <p>Apellido</p>
+                    <input id="apellido" type="Apellido">
+                    <p>Num Telefono</p>
+                    <input id="tel" type="tele"><br><br>
+                    <button  id="btnregistrar">Agregar</button>
+                </div>
+
+                <div id="lletabla">
+                    <table id="tper">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Telefono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="ui.js"></script>
+    <script src="llenartabla.js"></script>
+</body>
+
+</html>
