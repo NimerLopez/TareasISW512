@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autores</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <form id="auto">
+            <p>Nombre</p>
+            <input type="autorenom" id="nombre" />
+            <input type="button" value="Add" id="add-autor" />
+        </form>
+
+    </section>
+    <script class="addautor">
+
+        function addautor() {
+            const autorName = $('#nombre').val();
+
+            //insert to a database
+            let autorDb = JSON.parse(localStorage.getItem('authors'));
+            if (!autorDb) {
+                autorDb = [];
+            }
+
+            const au = {
+                name: autorName,
+                id: autorDb.length + 1
+            }
+            autorDb.push(au);
+            
+            localStorage.setItem('authors', JSON.stringify(autorDb));
+            // //reload the book list
+            // showListOfBooks();
+            console.log(JSON.parse(localStorage.getItem('authors')));
+            window.location.href = 'addBook.html';
+        }
+
+        $('#add-autor').bind('click', function () {
+            addautor();
+        });
+    </script>
+</body>
+
+</html>

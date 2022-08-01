@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>List of Books</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/template.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <section>
+    <h2>Books List</h2>
+    <a href="addBook.html">New Book</a>
+    <table class="table table-light">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="books_table">
+      </tbody>
+    </table>
+  </section>
+  <!-- <script src="js/database.js" type="text/javascript"></script>
+  <script src="js/application.js" type="text/javascript"></script> -->
+  <!-- <script src="js/app.js" type="text/javascript"></script> -->
+  <script>
+    function showListOfBooks() {
+      const books = JSON.parse(localStorage.getItem('books'));
+      const table = document.getElementById('books_table');
+
+      if (books) {
+        let rows = "";
+        books.forEach((book, index) => {
+          let row = `<tr>`;
+          row += `<td>${book.id}</td>`;
+          row += `<td>${book.name}</td>`;
+          row += `<td>${book.author}</td>`;
+          row += `<td> <a onclick="editBook(${book.id})" class="link edit">Edit</a>  |  <a  onclick="deleteBook(${book.id});" class="link delete">Delete</a>  </td>`;
+          rows += row + "</tr>";
+        });
+        table.innerHTML = rows;
+      }
+
+    }
+    function editBook(idbook) {
+      let valor1 = prompt("Nombre del libro", 0);
+      let valor2 = prompt("Nombre del Author", 0);
+      let libros = JSON.parse(localStorage.getItem('books'));
+      for (i = 0; i < libros.length; i++) {
+        if (libros[i].id == idbook) {
+          libros[i].author = valor2;
+          libros[i].name = valor1;
+        }
+      }
+      localStorage.removeItem('books');
+      localStorage.setItem('books', JSON.stringify(libros));
+      showListOfBooks();
+
+    }
+    function deleteBook(idbook) {
+
+      let libros = JSON.parse(localStorage.getItem('books'));
+      var x = libros.length;
+      if (x == 1) {
+        localStorage.removeItem('books');
+        libros = '';
+      }
+      for (i = 0; i < libros.length; i++) {
+        if (libros[i].id == idbook) {
+          let removedLibraries = libros.splice(i);
+          libros[i] = removedLibraries;
+          libros = removedLibraries;
+
+        }
+
+
+        localStorage.removeItem('books');
+        localStorage.setItem('books', JSON.stringify(libros));
+      }
+
+      showListOfBooks();
+    }
+    showListOfBooks();
+  </script>
+</body>
+
+</html>
